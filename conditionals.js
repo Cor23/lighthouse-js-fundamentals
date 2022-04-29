@@ -1,4 +1,4 @@
-//If Statements
+// (((If Statements)))
 
 /*const raining = false;
 const cold = false;
@@ -29,7 +29,9 @@ if(temperature < 0){
 
 console.log("Now you're ready to go outside!");*/
 
-// Logical Operators
+
+
+// (((Logical Operators)))
 
 /*const isCitizen = true;
 let age = 26;
@@ -51,6 +53,20 @@ if(isCitizen && age > 18){
 }*/
 
 
+
+// (((Conditionals -whichSchool)))
+
+const whichSchool = function(age){
+  if(age < 13){
+    return("Elementary School");
+  } else if(age >= 13 && age <= 18){
+    return("Secondary School");
+  } else {
+    return("Lighthouse Labs");
+  }
+}
+
+console.log(whichSchool(12));
 
 
 
