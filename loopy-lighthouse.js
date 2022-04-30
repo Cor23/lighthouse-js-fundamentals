@@ -1,6 +1,14 @@
 let number = 99;
 
-for(let i = 0; i < 101; i++){
-  ++number;
-  console.log(number);
+for(let i = 0; i <= 100; i++){
+  number++;
+  if(number % 3 === 0 && number % 4 === 0){
+    console.log("LoopyLighthouse")
+  } else if(number % 3 === 0){
+    console.log("Loopy")
+  } else if(number % 4 === 0){
+    console.log("Lighthouse")
+  } else {
+    console.log(number)
+  }
 }
