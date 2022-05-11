@@ -1,8 +1,15 @@
 function concat(arr1, arr2){
   let result = [];
-  result.push(arr1);
-  result.push(arr2);
+
+  for(let i = 0; i < arr1.length; i++){
+    result.push(arr1[i]);
+  }
+
+  for(let j = 0; j < arr2.length; j++){
+    result.push(arr2[j]);
+  }
   console.log(result);
+  return result;
 }
 
-concat([ 1, 2, 3 ], [ 4, 5, 6 ])
+concat([ 5, 10 ], []);
