@@ -1,18 +1,13 @@
-const smartGarbage = function (trash, bins) {
-  bins = {
-    waste: 0,
-    recycling: 0,
-    compost: 0
-  }
+const smartGarbage = function (trash, bins = { waste: 0, recycling: 0, compost: 0 }) {
 
   if(trash === 'waste'){
-    bins.waste = +1;
+    bins.waste++;
   } else if(trash === 'recycling'){
-    bins.recycling = +1;
+    bins.recycling++;
   } else if(trash === 'compost'){
-    bins.compost = +1;
+    bins.compost++;
   }
-  console.log(bins);
+  return bins;
 };
 
 smartGarbage('waste');
