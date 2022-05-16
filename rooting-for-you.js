@@ -1,15 +1,39 @@
-const judgeVegetable = function(vegetables, metric){
-  
-  let bestVegetable = {
-    submitter: '',
-    metricValue: 0
-  };
+const vegetables = [
+  {
+    submitter: 'Old Man Franklin',
+    redness: 10,
+    plumpness: 5
+  },
+  {
+    submitter: 'Sally Tomato-Grower',
+    redness: 2,
+    plumpness: 8
+  },
+  {
+    submitter: 'Hamid Hamidson',
+    redness: 4,
+    plumpness: 3
+  }
+]
 
-  for(let vegetable of vegetables){
-    if(vegetable[metric] > bestVegetable.metricValue){
-      bestVegetable.submitter = vegetable.submitter;
-      bestVegetable.metricValue = vegetable[metric];
+const metric = 'plumpness'
+
+let judgeVegetable = function(vegetables, metric){
+
+  let best = vegetables[0];
+  let bestMetric = best[metric];
+  
+  for(i = 0; i < vegetables.length; i++){
+    const current = vegetables[i];
+    const currentMetric = current[metric];
+
+    if(bestMetric < currentMetric){
+      best = current;
+      bestMetric = currentMetric;
     }
   }
-  return bestVegetable.submitter;
-};
+  console.log(best.submitter);
+  return best.submitter;
+}
+
+judgeVegetable(vegetables, metric)
